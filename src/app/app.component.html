@@ -17,12 +17,17 @@
 
 <div style="display: flex; flex: 1; height: 100%;width: 100%; align-items: center;justify-content: center;">
   <div>
-    <nz-select style="width: 100px;" [(ngModel)]="layerSelect" nzAllowClear nzPlaceHolder="Choose">
+    <nz-select style="width: 100%;" [(ngModel)]="layerSelect" nzAllowClear nzPlaceHolder="Choose">
       <nz-option *ngFor ="let item of listLayer" [nzValue]="item.value" [nzLabel]="item.label"></nz-option>
     </nz-select>
-    <input nz-input placeholder="color code" [(ngModel)]="color" />
-    <button nz-button nzType="primary" (click)="onChangeColor()">Change color</button>
+    <!-- <input nz-input placeholder="color code" [(ngModel)]="color" /> -->
+    <button nz-button nzType="primary" (click)="onChangeColor('#ff0000')" style="background-color: #ff0000;">#ff0000</button>
+    <button nz-button nzType="primary" (click)="onChangeColor('#a8329b')" style="background-color: #a8329b;">#a8329b</button>
+    <button nz-button nzType="primary" (click)="onChangeColor('#3632a8')" style="background-color: #3632a8;">#3632a8</button>
+    <button nz-button nzType="primary" (click)="onChangeColor('#329ca8')" style="background-color: #329ca8;">#329ca8</button>
+    <button nz-button nzType="primary" (click)="onChangeColor('#32a83a')" style="background-color: #32a83a;">#32a83a</button>
+    <button nz-button nzType="primary" (click)="onChangeColor('#9ca832')" style="background-color: #9ca832;">#9ca832</button>
   </div>
-  <canvas #canvas style="height: 50%;width: 50%;"></canvas>
+  <canvas #canvas style="height: 75%;width: 75%;"></canvas>
 </div>
 
