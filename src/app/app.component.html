@@ -1,0 +1,28 @@
+<!-- NG-ZORRO -->
+<!-- <a href="https://github.com/NG-ZORRO/ng-zorro-antd" target="_blank" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
+  <img height="300" src="https://img.alicdn.com/tfs/TB1X.qJJgHqK1RjSZFgXXa7JXXa-89-131.svg">
+</a> -->
+
+<!-- <div id="container" style="display: flex;align-items: center;justify-content: center;height: 100%;width: 100%;">
+  <model-viewer
+    style="width: 100%; height: 100%;"
+    camera-controls
+    camera-orbit="45deg 55deg 2.5m" 
+    [src]="modelUrl"
+    alt="A 3D model of an astronaut"
+    data-js-focus-visible=""
+    ar-status="not-presenting"
+  ></model-viewer>
+</div> -->
+
+<div style="display: flex; flex: 1; height: 100%;width: 100%; align-items: center;justify-content: center;">
+  <div>
+    <nz-select style="width: 100px;" [(ngModel)]="layerSelect" nzAllowClear nzPlaceHolder="Choose">
+      <nz-option *ngFor ="let item of listLayer" [nzValue]="item.value" [nzLabel]="item.label"></nz-option>
+    </nz-select>
+    <input nz-input placeholder="color code" [(ngModel)]="color" />
+    <button nz-button nzType="primary" (click)="onChangeColor()">Change color</button>
+  </div>
+  <canvas #canvas style="height: 50%;width: 50%;"></canvas>
+</div>
+
